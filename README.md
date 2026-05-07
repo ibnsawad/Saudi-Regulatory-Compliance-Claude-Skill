@@ -5,9 +5,11 @@
 ![Frameworks](https://img.shields.io/badge/Frameworks-8-orange)
 ![Built%20with](https://img.shields.io/badge/Built%20with-Claude-blueviolet)
 
-> Expert-level compliance guidance for Saudi Arabia's regulatory landscape — powered by Claude Skills.
+> Structured, regulation-aware guidance for Saudi Arabia's regulatory landscape — powered by Claude Skills.
 
-This Claude Skill provides deep, authoritative guidance on Saudi Arabia's cybersecurity, cloud, and data protection regulatory frameworks. Ask questions in plain language and get structured, regulation-specific answers — no need to read hundreds of pages of official documentation.
+> This is an independent open-source project and is not affiliated with NCA, SAMA, CST, SDAIA, or any government authority.
+
+This Claude Skill provides structured, regulation-aware guidance on Saudi Arabia's cybersecurity, cloud, and data protection regulatory frameworks. Ask questions in plain language and get regulation-specific answers — no need to read hundreds of pages of official documentation.
 
 ---
 
@@ -81,7 +83,7 @@ controls are mandatory under ECC-2:2024?
 
 ## Testing the Skill
 
-A `Tests/` folder is included with 5 scenario-based test cases:
+A `tests/` folder is included with 5 scenario-based test cases:
 
 | Test | Scenario |
 |---|---|
@@ -91,7 +93,7 @@ A `Tests/` folder is included with 5 scenario-based test cases:
 | `test-04-critical-system.md` | Critical infrastructure controls |
 | `test-05-data-protection.md` | PDPL data protection obligations |
 
-Run any test prompt in a new Claude conversation to validate the skill is working correctly. See `Tests/scoring-model.md` for the evaluation rubric.
+Run any test prompt in a new Claude conversation to validate the skill is working correctly. See `tests/scoring-model.md` for the evaluation rubric.
 
 ---
 
@@ -145,9 +147,10 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## Author
+## 👤 Author
 
-**Majid Bin Sawad** — [@ibnsawad](https://github.com/ibnsawad)
+**Majid Bib Sawad** — [@ibnsawad](https://github.com/ibnsawad)
+majid.sawad@gmail.com
 
 ---
 
