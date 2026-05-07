@@ -101,7 +101,7 @@ Run any test prompt in a new Claude conversation to validate the skill is workin
 Saudi-Regulatory-Compliance-Claude-Skill/
 ├── SKILL.md                              # Core skill instructions
 ├── saudi-regulatory-compliance-v2.skill  # Packaged skill file (upload this to Claude)
-├── References/
+├── references/
 │   ├── ECC-2-2024.md                 # NCA Essential Cybersecurity Controls
 │   ├── CCC-2-2024.md                 # NCA Cloud Cybersecurity Controls
 │   ├── DCC-1-2022.md                 # NCA Data Cybersecurity Controls
@@ -109,7 +109,7 @@ Saudi-Regulatory-Compliance-Claude-Skill/
 │   ├── SAMA-CSF.md                   # SAMA Cybersecurity Framework
 │   ├── CST-Regulations.md            # CST Cloud Regulations
 │   └── PDPL-Notes.md                 # Personal Data Protection Law
-├── Tests/
+├── tests/
 │   ├── scoring-model.md              # Evaluation rubric
 │   ├── test-01-cloud-csp.md
 │   ├── test-02-government-entity.md
