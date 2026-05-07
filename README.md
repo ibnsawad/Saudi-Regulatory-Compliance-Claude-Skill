@@ -1,4 +1,5 @@
 # Saudi Regulatory Compliance — Claude Skill
+> *"Your AI compliance assistant for Saudi Arabia's regulatory landscape."*
 
 ![Release](https://img.shields.io/badge/Release-v2.0.0-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
