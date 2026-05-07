@@ -150,7 +150,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ## 👤 Author
 
-**Majid Bib Sawad** — [@ibnsawad](https://github.com/ibnsawad)
+**Majid Bin Sawad** — [@ibnsawad](https://github.com/ibnsawad)
 
 ---
 
