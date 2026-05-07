@@ -1,4 +1,4 @@
-# 🇸🇦 Saudi Regulatory Compliance — Claude Skill
+# Saudi Regulatory Compliance — Claude Skill
 
 ![Release](https://img.shields.io/badge/Release-v1.0.0-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
@@ -11,7 +11,7 @@ This Claude Skill provides deep, authoritative guidance on Saudi Arabia's cybers
 
 ---
 
-## 📋 Frameworks Covered
+## Frameworks Covered
 
 | Framework | Authority | Domain |
 |---|---|---|
@@ -26,7 +26,7 @@ This Claude Skill provides deep, authoritative guidance on Saudi Arabia's cybers
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 - Claude account (Free, Pro, Max, Team, or Enterprise)
@@ -34,12 +34,14 @@ This Claude Skill provides deep, authoritative guidance on Saudi Arabia's cybers
 
 ### Steps
 
-1. **Download** — Clone or download this repository
+1. **Download the skill file** — Click `saudi-regulatory-compliance-v2.skill` in this repo, then click the **Download raw file** button (⬇️ icon, top right of the file view)
+
+   Or clone the full repo:
    ```bash
    git clone https://github.com/ibnsawad/Saudi-Regulatory-Compliance-Claude-Skill.git
    ```
 
-2. **Locate the skill file** — Find `saudi-regulatory-compliance.skill` in the root folder
+2. **Locate the skill file** — Use the downloaded `saudi-regulatory-compliance-v2.skill` file directly
 
 3. **Upload to Claude**
    - Go to **Settings → Customize → Skills**
@@ -51,7 +53,7 @@ This Claude Skill provides deep, authoritative guidance on Saudi Arabia's cybers
 
 ---
 
-## 💬 Example Prompts
+## Example Prompts
 
 Once installed, try these in a new Claude conversation:
 
@@ -77,7 +79,7 @@ controls are mandatory under ECC-2:2024?
 
 ---
 
-## 🧪 Testing the Skill
+## Testing the Skill
 
 A `Tests/` folder is included with 5 scenario-based test cases:
 
@@ -93,12 +95,12 @@ Run any test prompt in a new Claude conversation to validate the skill is workin
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 Saudi-Regulatory-Compliance-Claude-Skill/
-├── SKILL.md                          # Core skill instructions
-├── saudi-regulatory-compliance.skill # Packaged skill file (upload this)
+├── SKILL.md                              # Core skill instructions
+├── saudi-regulatory-compliance-v2.skill  # Packaged skill file (upload this to Claude)
 ├── References/
 │   ├── ECC-2-2024.md                 # NCA Essential Cybersecurity Controls
 │   ├── CCC-2-2024.md                 # NCA Cloud Cybersecurity Controls
@@ -121,13 +123,13 @@ Saudi-Regulatory-Compliance-Claude-Skill/
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This skill is intended for informational and educational purposes only. It does not constitute legal or regulatory advice. Always consult qualified legal counsel and refer to official regulatory publications from NCA, SAMA, CST, and SDAIA for authoritative guidance.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! If you spot outdated information, want to add a new framework, or improve test cases:
 
@@ -137,15 +139,15 @@ Contributions welcome! If you spot outdated information, want to add a new frame
 
 ---
 
-## 📄 License
+## License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 👤 Author
+## Author
 
-**Majid** — [@ibnsawad](https://github.com/ibnsawad)
+**Majid Bin Sawad** — [@ibnsawad](https://github.com/ibnsawad)
 
 ---
 
