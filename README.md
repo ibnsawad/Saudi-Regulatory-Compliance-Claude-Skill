@@ -1,6 +1,6 @@
 # Saudi Regulatory Compliance — Claude Skill
 
-![Release](https://img.shields.io/badge/Release-v1.0.0-green)
+![Release](https://img.shields.io/badge/Release-v2.0.0-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Frameworks](https://img.shields.io/badge/Frameworks-8-orange)
 ![Built%20with](https://img.shields.io/badge/Built%20with-Claude-blueviolet)
