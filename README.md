@@ -25,7 +25,7 @@ This Claude Skill provides structured, regulation-aware guidance on Saudi Arabia
 | **SAMA-CSF** | Saudi Central Bank | Cybersecurity Framework for Financial Sector |
 | **CST Regulations** | Communications, Space & Technology Commission | Cloud Computing Regulatory Framework |
 | **PDPL** | NDMO / SDAIA | Personal Data Protection Law |
-| **NCA TCC-1:2023** | National Cybersecurity Authority | Telecommunications Cybersecurity Controls |
+| **NCA TCC-1:2023** | National Cybersecurity Authority | Telework Cybersecurity Controls |
 
 ---
 
