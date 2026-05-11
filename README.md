@@ -128,7 +128,7 @@ saudi-regulatory-compliance/
 ├── README.md                    # This file
 ├── DEMO-GUIDE.md                # Walk-through for trying the skill
 ├── DISCLAIMER.md                # Limitations and intended use
-├── LICENSE.txt                  # MIT licence
+├── LICENSE                  # MIT licence
 ├── references/
 │   ├── ECC-2-2024.md            # NCA Essential Cybersecurity Controls
 │   ├── CCC-2-2024.md            # NCA Cloud Cybersecurity Controls
