@@ -1,157 +1,225 @@
-# Saudi Regulatory Compliance — Claude Skill
-> *"Your AI compliance assistant for Saudi Arabia's regulatory landscape."*
+# Saudi Regulatory Compliance Skill
 
-![Release](https://img.shields.io/badge/Release-v2.0.0-green)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![Frameworks](https://img.shields.io/badge/Frameworks-8-orange)
-![Built%20with](https://img.shields.io/badge/Built%20with-Claude-blueviolet)
-
-> Structured, regulation-aware guidance for Saudi Arabia's regulatory landscape — powered by Claude Skills.
-
-> This is an independent open-source project and is not affiliated with NCA, SAMA, CST, SDAIA, or any government authority.
-
-This Claude Skill provides structured, regulation-aware guidance on Saudi Arabia's cybersecurity, cloud, and data protection regulatory frameworks. Ask questions in plain language and get regulation-specific answers — no need to read hundreds of pages of official documentation.
+A structured, AI-driven advisor for cybersecurity, cloud, OT, and data-protection compliance in the Kingdom of Saudi Arabia.
 
 ---
 
-## Frameworks Covered
+## About
 
-| Framework | Authority | Domain |
-|---|---|---|
-| **NCA ECC-2:2024** | National Cybersecurity Authority | Essential Cybersecurity Controls |
-| **NCA CCC-2:2024** | National Cybersecurity Authority | Cloud Cybersecurity Controls |
-| **NCA DCC-1:2022** | National Cybersecurity Authority | Data Cybersecurity Controls |
-| **NCA CSCC-1:2019** | National Cybersecurity Authority | Cybersecurity Controls for Critical Systems |
-| **SAMA-CSF** | Saudi Central Bank | Cybersecurity Framework for Financial Sector |
-| **CST Regulations** | Communications, Space & Technology Commission | Cloud Computing Regulatory Framework |
-| **PDPL** | NDMO / SDAIA | Personal Data Protection Law |
-| **NCA TCC-1:2023** | National Cybersecurity Authority | Telework Cybersecurity Controls |
+This is an independent, open-source project that explores how AI can support cybersecurity and privacy compliance assessments under Saudi regulation. It is not affiliated with NCA, SAMA, CST, SDAIA, or NDMO and is not an official assessment tool. It is built for educational and professional use by compliance teams, CISOs, internal auditors, and consultants.
 
 ---
 
-## Installation
+## Why this project
 
-### Prerequisites
-- Claude account (Free, Pro, Max, Team, or Enterprise)
-- Code execution enabled: **Settings → Capabilities → Code execution and file creation**
+Saudi Arabia has one of the most layered regulatory environments in the region. A single organisation may simultaneously be in scope for NCA cybersecurity controls, sector-specific SAMA or CST regulation, NDMO data-management standards, and PDPL privacy obligations — each with its own structure, language, and assessment methodology. This skill tries to:
 
-### Steps
-
-1. **Download the skill file** — Click `saudi-regulatory-compliance-v2.skill` in this repo, then click the **Download raw file** button (⬇️ icon, top right of the file view)
-
-   Or clone the full repo:
-   ```bash
-   git clone https://github.com/ibnsawad/Saudi-Regulatory-Compliance-Claude-Skill.git
-   ```
-
-2. **Locate the skill file** — Use the downloaded `saudi-regulatory-compliance-v2.skill` file directly
-
-3. **Upload to Claude**
-   - Go to **Settings → Customize → Skills**
-   - Click **"+"** → **"+ Create skill"** → **"Upload a skill"**
-   - Select the `.skill` file
-   - Toggle it **ON**
-
-4. **Start a new chat** — The skill activates automatically. No commands needed.
+- Apply the right framework set on the first read by classifying entity type before assessing.
+- Produce findings that cite specific framework versions and controls (rather than generic recommendations).
+- Use a multi-axis scoring approach that distinguishes regulatory risk from operational risk.
+- Surface notification and reporting obligations alongside control findings.
+- Map to international frameworks (ISO/IEC 27001:2022, ISO/IEC 27701:2019, NIST CSF 2.0) where useful.
 
 ---
 
-## Example Prompts
+## Target audience
 
-Once installed, try these in a new Claude conversation:
-
-```
-We are a cloud service provider operating in Saudi Arabia offering IaaS 
-to government and private sector clients. What NCA and CST regulations apply to us?
-```
-
-```
-We are a Saudi bank. What does the SAMA Cybersecurity Framework require 
-and how does it overlap with NCA ECC?
-```
-
-```
-We collect personal data from Saudi residents. What are our obligations 
-under the PDPL and its implementing regulations?
-```
-
-```
-We operate critical national infrastructure in KSA. What cybersecurity 
-controls are mandatory under ECC-2:2024?
-```
+- Cybersecurity professionals and CISOs operating in KSA.
+- GRC and compliance practitioners.
+- Cloud security teams, including CSPs and Cloud Service Tenants.
+- OT / ICS security leads in critical national infrastructure.
+- Internal and external auditors preparing for or responding to regulator inspections.
+- Researchers and students studying GCC regulatory frameworks.
 
 ---
 
-## Testing the Skill
+## Supported frameworks (v3.0)
 
-A `tests/` folder is included with 5 scenario-based test cases:
+### National Cybersecurity Authority (NCA)
+- Essential Cybersecurity Controls — **ECC-2:2024**
+- Cloud Cybersecurity Controls — **CCC-2:2024**
+- Data Cybersecurity Controls — **DCC-1:2022**
+- Critical Systems Cybersecurity Controls — **CSCC-1:2019**
+- Operational Technology Cybersecurity Controls — **OTCC-1:2022**
+- Telework Cybersecurity Controls — **TCC-1:2023**
+- Organizations' Social Media Accounts Cybersecurity Controls — **OSMACC-1:2021**
+- Cybersecurity Guidelines for E-commerce Consumers — **CGEC-1:2019**
+- Cybersecurity Guidelines for E-commerce Service Providers — **CGESP-1:2019**
+- National Cryptographic Standards — **NCS-1:2020**
 
-| Test | Scenario |
-|---|---|
-| `test-01-cloud-csp.md` | Cloud service provider obligations |
-| `test-02-government-entity.md` | Government entity cloud compliance |
-| `test-03-bank-sama.md` | Bank compliance under SAMA-CSF |
-| `test-04-critical-system.md` | Critical infrastructure controls |
-| `test-05-data-protection.md` | PDPL data protection obligations |
+### Saudi Central Bank (SAMA)
+- Cybersecurity Framework — **CSF v1.0 (May 2017)**
+- IT Governance Framework — **v1.0 (2022)**
+- Business Continuity Management Framework — **v1.0 (2017)**
 
-Run any test prompt in a new Claude conversation to validate the skill is working correctly. See `tests/scoring-model.md` for the evaluation rubric.
+### Communications, Space and Technology Commission (CST)
+- Cloud Computing Regulatory Framework — **CCRF v2 (2023)** — licence classes, customer-data tiers, customer protection
+- Cybersecurity Regulatory Framework for ICT Service Providers — **CRF RT08, Second Version (October 2023)** — telecom operators, ISPs, managed service providers; 6 domains, 25 subdomains, 3 compliance levels
+
+### Saudi Data and AI Authority (SDAIA) and National Data Management Office (NDMO)
+- Personal Data Protection Law — **PDPL** (Royal Decree M/19, 2021; amended 2023; effective 14 Sept 2023; full enforcement 14 Sept 2024)
+- **PDPL Implementing Regulations (Sept 2023)**
+- **Personal Data Transfer Regulation (Sept 2024)**
+- **NDMO Data Management & Personal Data Protection Standards** (v1.5, 2022)
+
+### Cross-mappings offered
+- ISO/IEC 27001:2022 + Annex A
+- ISO/IEC 27701:2019 (PIMS overlay for PDPL)
+- ISO/IEC 27017 / 27018 (cloud / cloud-PII)
+- NIST CSF 2.0 functions (Govern, Identify, Protect, Detect, Respond, Recover)
+- NIST SP 800-53 Rev 5 / SP 800-82 Rev 3 (for CSCC / OTCC depth)
+- IEC 62443 (for OT / ICS)
+- PCI DSS v4.0.1 (where card processing is in scope)
 
 ---
 
-## Repository Structure
+## Key capabilities
+
+- **Entity classification** — selects the right framework set before assessing.
+- **Multi-framework gap analysis** with version-cited control references.
+- **Multi-axis scoring** — status, regulatory risk, operational risk, priority (P1–P4), with NCA compliance levels (1–5) and SAMA maturity (0–5) where applicable.
+- **Cloud assessments** for both CSP-side and Cloud Service Tenant-side obligations.
+- **OT / ICS coverage** under OTCC with Purdue-model and IEC 62443 mapping.
+- **Privacy assessments** under PDPL with sensitive-data and cross-border treatment.
+- **Notification and reporting routing** across SAMA, SDAIA, NCA, CST, and NDMO.
+- **Audit-ready outputs** with finding-table format, risk heatmap, and remediation roadmap.
+- **Cross-framework mapping** to ISO and NIST.
+
+---
+
+## Use cases
+
+- Pre-audit readiness for NCA / SAMA / CST inspections.
+- Cloud licensing preparation under CST CCRF.
+- Critical-system designation and CSCC overlay assessments.
+- OT / ICS cybersecurity readiness for utilities, energy, water, and manufacturing.
+- PDPL implementation and Transfer Regulation reviews.
+- Vendor and third-party security questionnaires.
+- Board and management compliance reporting.
+- Training and uplift for compliance teams.
+
+---
+
+## How it works
+
+The user provides:
+
+- An entity description (sector, licensing posture, lead regulator, system architecture).
+- Security controls, governance documents, or audit findings already in place.
+- The compliance scope or specific question.
+
+The skill:
+
+1. **Classifies** the entity and selects the framework set.
+2. **Asks** up to three clarifying questions if scope is unclear.
+3. **Evaluates** against each applicable framework using the per-framework reference notes in `references/`.
+4. **Scores** findings on the multi-axis model in `tests/scoring-model.md`.
+5. **Produces** a structured assessment using the format in `references/finding-template.md`.
+6. **Calls out** notification and reporting triggers separately.
+7. **Maps** to ISO and NIST when offered.
+
+---
+
+## Architecture
 
 ```
-Saudi-Regulatory-Compliance-Claude-Skill/
-├── SKILL.md                              # Core skill instructions
-├── saudi-regulatory-compliance-v2.skill  # Packaged skill file (upload this to Claude)
+saudi-regulatory-compliance/
+├── SKILL.md                     # Entry point with role, framework table, workflow
+├── README.md                    # This file
+├── DEMO-GUIDE.md                # Walk-through for trying the skill
+├── DISCLAIMER.md                # Limitations and intended use
+├── LICENSE.txt                  # MIT licence
 ├── references/
-│   ├── ECC-2-2024.md                 # NCA Essential Cybersecurity Controls
-│   ├── CCC-2-2024.md                 # NCA Cloud Cybersecurity Controls
-│   ├── DCC-1-2022.md                 # NCA Data Cybersecurity Controls
-│   ├── CSCC.md                       # Critical Systems Cybersecurity Controls
-│   ├── SAMA-CSF.md                   # SAMA Cybersecurity Framework
-│   ├── CST-Regulations.md            # CST Cloud Regulations
-│   └── PDPL-Notes.md                 # Personal Data Protection Law
-├── tests/
-│   ├── scoring-model.md              # Evaluation rubric
-│   ├── test-01-cloud-csp.md
-│   ├── test-02-government-entity.md
-│   ├── test-03-bank-sama.md
-│   ├── test-04-critical-system.md
-│   └── test-05-data-protection.md
-├── DEMO-GUIDE.md                     # Demo walkthrough
-├── DISCLAIMER.md                     # Legal disclaimer
-└── README.md                         # This file
+│   ├── ECC-2-2024.md            # NCA Essential Cybersecurity Controls
+│   ├── CCC-2-2024.md            # NCA Cloud Cybersecurity Controls
+│   ├── DCC-1-2022.md            # NCA Data Cybersecurity Controls
+│   ├── CSCC-1-2019.md           # NCA Critical Systems Cybersecurity Controls
+│   ├── OTCC-1-2022.md           # NCA Operational Technology Cybersecurity Controls
+│   ├── TCC-1-2023.md            # NCA Telework Cybersecurity Controls
+│   ├── OSMACC-1-2021.md         # NCA Organizations' Social Media Accounts Controls
+│   ├── CGEC-1-2019.md           # NCA Cybersecurity Guidelines for E-commerce Consumers
+│   ├── CGESP-1-2019.md          # NCA Cybersecurity Guidelines for E-commerce Service Providers
+│   ├── NCS-1-2020.md            # NCA National Cryptographic Standards
+│   ├── SAMA-CSF.md              # SAMA CSF + IT Governance + BCM
+│   ├── CST-Regulations.md       # CCRF (RS10), licence classes, customer-data tiers
+│   ├── CST-CRF.md               # CST Cybersecurity Regulatory Framework RT08 for ICT SPs
+│   ├── PDPL.md                  # PDPL + Implementing Regs + Transfer Reg
+│   ├── NDMO-Standards.md        # NDMO Data Management & PDP Standards
+│   ├── finding-template.md      # Finding-row template and field guidance
+│   └── examples.md              # Two end-to-end worked examples
+└── tests/
+    ├── README.md                # Eval index with coverage map
+    ├── scoring-model.md         # Multi-axis scoring rubric
+    ├── test-01-cloud-csp.md
+    ├── test-02-government-entity.md
+    ├── test-03-bank-sama.md
+    ├── test-04-critical-system.md
+    ├── test-05-data-protection.md
+    ├── test-06-ot-energy.md
+    ├── test-07-telework.md
+    ├── test-08-fintech-multi-overlay.md
+    └── test-09-incident-notification.md
 ```
 
 ---
 
-## Disclaimer
+## Design principles
 
-This skill is intended for informational and educational purposes only. It does not constitute legal or regulatory advice. Always consult qualified legal counsel and refer to official regulatory publications from NCA, SAMA, CST, and SDAIA for authoritative guidance.
-
----
-
-## Contributing
-
-Contributions welcome! If you spot outdated information, want to add a new framework, or improve test cases:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b update/framework-name`
-3. Submit a pull request with a clear description of changes
+- **Saudi-first**, with international mapping as overlay rather than substitute.
+- **Cite versions** — every framework reference is dated.
+- **Don't fabricate control numbers** — uncertain references are tagged for verification.
+- **Two risk axes, not one** — regulatory risk and operational risk are separate dimensions.
+- **Notification matters** — incident- and breach-reporting paths are first-class output.
+- **Engineering, not legal** — this skill produces compliance-engineering analysis, not legal opinions.
+- **Evidence-oriented** — every finding has an "evidence required" field aligned to what an assessor will ask for.
 
 ---
 
-## License
+## Limitations
 
-MIT License — see [LICENSE](LICENSE) for details.
+- Not a substitute for formal audits, QSA assessments, or accredited assessor reviews.
+- Does not connect to live systems, evidence repositories, or regulator portals.
+- Quality of output depends on completeness of input.
+- Saudi regulations evolve; framework versions and reporting timelines must be re-checked against current published documents.
+- Sectoral overlays beyond the listed frameworks (Aramco IPSCS, Ministry of Health programmes, etc.) are not modelled in detail.
+- The skill flags uncertain control numbers rather than fabricating them — exact §-codes should be confirmed against official documents before formal use.
 
 ---
 
-## 👤 Author
+## Roadmap
 
-**Majid Bin Sawad** — [@ibnsawad](https://github.com/ibnsawad)
+Candidates for future iterations:
+
+- Dedicated reference for **SAMA Open Banking Framework**, **SAMA Outsourcing Regulations**, and **SAMA Counter-Fraud Framework**.
+- Reference for **PCI DSS v4.0.1** as a first-class reference file (currently cross-mapping only).
+- Reference for **CST IoT Regulatory Framework**.
+- Dedicated test scenario for **NCS-1:2020** cryptographic standards audit (standalone, not background).
+- Dedicated test scenario for **OSMACC-1:2021** social-media account assessment.
+- Dedicated test scenario for **CST CRF RT08** ICT Service Provider assessment.
+- Dedicated test scenario for **CGESP-1:2019** SME/SoHo e-commerce operator.
+- A Statement of Applicability spreadsheet template (per framework).
+- A control-by-control catalogue for ECC-2:2024 with NIST CSF 2.0 + ISO/IEC 27001:2022 mappings.
+- Sample executive and audit-committee report templates.
+- Optional language pack with Arabic terminology for Arabic-language outputs.
+- Companion eval harness using the `skill-creator` tooling.
+- NCS update once NCA publishes post-quantum cryptography guidance aligned to NIST FIPS 203/204/205 (August 2024 standards).
+
+Suggestions and contributions welcome — see DISCLAIMER for use limits.
 
 ---
 
-*If this skill helped you, consider giving it a ⭐ on GitHub!*
+## Version
+
+**v3.0** — Added 5 new NCA framework reference files: OSMACC-1:2021 (social media account controls), CST CRF RT08 (ICT Service Provider cybersecurity regulatory framework), CGEC-1:2019 (e-commerce consumer guidelines), CGESP-1:2019 (e-commerce service provider guidelines), NCS-1:2020 (national cryptographic standards). Updated SKILL.md framework table to 19 entries, assessment workflow triage list, entity classification overlays, and reference file list. Updated README.md and tests/README.md coverage map to reflect all 15 reference files.
+
+**v2.0** — Expanded framework coverage (added OTCC, TCC, NDMO, SAMA IT Governance, SAMA BCM, Personal Data Transfer Regulation), reorganised reference notes with per-framework version dates, multi-axis scoring rubric, finding-template, two worked examples, nine evaluation scenarios with pass/fail criteria.
+
+**v1.0** — Initial Saudi regulatory compliance release with ECC, CCC, DCC, CSCC, SAMA CSF, CST regulations, and PDPL.
+
+---
+
+## Author
+
+**Majid Bin Sawad**
+Cybersecurity Director
+majid.sawad@gmail.com

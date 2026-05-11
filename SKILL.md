@@ -1,6 +1,6 @@
 ---
 name: saudi-regulatory-compliance
-description: Senior cybersecurity, cloud, and data-protection compliance advisor for organisations operating in the Kingdom of Saudi Arabia (KSA). Use this skill whenever the user asks about NCA ECC-2:2024, NCA CCC-2:2024, NCA DCC-1:2022, NCA CSCC-1:2019, NCA OTCC-1:2022, NCA TCC-1:2023, SAMA Cybersecurity Framework, SAMA IT Governance Framework, SAMA Business Continuity Framework, CST Cloud Computing Regulatory Framework, PDPL and its Implementing Regulations, the Personal Data Transfer Regulation, NDMO Data Management and Personal Data Protection Standards, or SDAIA guidance. Also trigger for gap assessments, audit readiness, regulator inspections, breach notifications, cross-border transfer reviews, cloud licensing classification, critical-system designation, or any question about the cybersecurity, cloud, or privacy obligations of Saudi government, financial, healthcare, telecom, energy, or cloud-tenant entities — even when the user does not name a specific framework.
+description: Senior cybersecurity, cloud, and data-protection compliance advisor for organisations operating in the Kingdom of Saudi Arabia (KSA). Use this skill whenever the user asks about NCA ECC-2:2024, NCA CCC-2:2024, NCA DCC-1:2022, NCA CSCC-1:2019, NCA OTCC-1:2022, NCA TCC-1:2023, NCA OSMACC-1:2021, NCA CGEC-1:2019, NCA CGESP-1:2019, NCA NCS-1:2020, SAMA Cybersecurity Framework, SAMA IT Governance Framework, SAMA Business Continuity Framework, CST Cloud Computing Regulatory Framework, CST Cybersecurity Regulatory Framework (CRF RT08) for ICT Service Providers, PDPL and its Implementing Regulations, the Personal Data Transfer Regulation, NDMO Data Management and Personal Data Protection Standards, or SDAIA guidance. Also trigger for gap assessments, audit readiness, regulator inspections, breach notifications, cross-border transfer reviews, cloud licensing classification, critical-system designation, social media account cybersecurity, ICT service provider cybersecurity obligations, telecom operator compliance, e-commerce consumer protection obligations, SME or SoHo e-commerce cybersecurity, cryptographic standards, encryption algorithm selection, key lifecycle management, TLS configuration, or any question about the cybersecurity, cloud, privacy, or cryptographic obligations of Saudi government, financial, healthcare, telecom, energy, e-commerce, or cloud-tenant entities — even when the user does not name a specific framework.
 ---
 
 # Saudi Regulatory Compliance
@@ -23,12 +23,12 @@ Every assessment uses this set. Pick what applies based on the entity classifica
 
 | # | Framework | Issuer | Version / date | Primary scope |
 |---|-----------|--------|----------------|---------------|
-| 1 | Essential Cybersecurity Controls | NCA | ECC-2:2024 | Baseline for all NCA-scoped entities |
+| 1 | Essential Cybersecurity Controls | NCA | ECC-2:2024 (4 domains, 28 subdomains, 108 controls, 92 subcontrols) | Baseline for all NCA-scoped entities |
 | 2 | Cloud Cybersecurity Controls | NCA | CCC-2:2024 | CSPs and Cloud Service Tenants (CSTs) |
-| 3 | Data Cybersecurity Controls | NCA | DCC-1:2022 | Data lifecycle protection |
+| 3 | Data Cybersecurity Controls | NCA | DCC-1:2022 (3 domains, 11 subdomains, 19 controls, 47 subcontrols) | Data lifecycle protection — extends ECC; ECC compliance is a prerequisite |
 | 4 | Critical Systems Cybersecurity Controls | NCA | CSCC-1:2019 | Designated critical systems |
 | 5 | Operational Technology Cybersecurity Controls | NCA | OTCC-1:2022 | OT/ICS environments |
-| 6 | Telework Cybersecurity Controls | NCA | TCC-1:2023 | Remote access / telework |
+| 6 | Telework Cybersecurity Controls | NCA | TCC-1:2021 (3 domains, 16 subdomains, 21 controls, 42 subcontrols) | Remote access / telework |
 | 7 | SAMA Cybersecurity Framework | SAMA | v1.0, May 2017 | Member organisations supervised by SAMA |
 | 8 | SAMA IT Governance Framework | SAMA | v1.0, 2022 | SAMA-supervised IT governance |
 | 9 | SAMA Business Continuity Framework | SAMA | v1.0, 2017 | SAMA-supervised BCM |
@@ -37,6 +37,11 @@ Every assessment uses this set. Pick what applies based on the entity classifica
 | 12 | PDPL Implementing Regulations | SDAIA | Sept 2023 | Operationalises PDPL |
 | 13 | Personal Data Transfer Regulation | SDAIA | Sept 2024 | Cross-border transfer mechanics |
 | 14 | NDMO Data Management & Personal Data Protection Standards | NDMO | v1.5, 2022 | Government data management |
+| 15 | Organizations' Social Media Accounts Cybersecurity Controls | NCA | OSMACC-1:2021 (3 domains, 12 subdomains, 15 controls, 38 subcontrols) | Social media account protection — extends ECC; ECC compliance is a prerequisite |
+| 16 | Cybersecurity Regulatory Framework for ICT Service Providers | CST | CRF RT08, Second Version, October 2023 (6 domains, 25 subdomains for non-CNI SPs; 3 compliance levels) | All CST-licensed/registered ICT Service Providers — telecom operators, ISPs, managed service providers — not to be confused with the CST Cloud Computing Services Provisioning Regulations (RS10) |
+| 17 | Cybersecurity Guidelines for E-commerce Consumers | NCA | CGEC-1:2019 (4 categories, 18 guidelines) | Consumer awareness guidelines for KSA e-commerce users; non-mandatory for individuals, but implies platform obligations for e-commerce operators relevant to ECC, PDPL, and the E-commerce Law |
+| 18 | Cybersecurity Guidelines for E-commerce Service Providers | NCA | CGESP-1:2019 (7 categories, 30 guidelines) | Awareness guidelines for SME and SoHo e-commerce service providers in KSA; non-mandatory but strongly encouraged; complements ECC-2:2024 (large enterprises), PDPL, SAMA CSF, and the E-Commerce Act |
+| 19 | National Cryptographic Standards | NCA | NCS-1:2020, Version 1.0, July 2020 (two strength levels: MODERATE targeting 128-bit security; ADVANCED targeting 256-bit security) | Mandatory minimum cryptographic requirements for all national entities for civilian and commercial purposes; referenced by ECC-2:2024 §2-5, DCC-1:2022 §2-5-1, CSCC-1:2019, OTCC-1:2022, CCC-2:2024, and TCC-1:2023 |
 
 Refer to the per-framework files in `references/` for domain structure, control families, and assessment guidance. Always cite the version when you reference a framework in output.
 
@@ -64,7 +69,7 @@ Step 1 — Confirm the entity type. Ask the user if unclear:
 
 - Government / public sector / state-owned enterprise → ECC-2:2024 baseline + DCC-1:2022 + (CSCC-1:2019 if any system is designated critical) + (OTCC-1:2022 if OT) + NDMO Standards.
 - Financial institution licensed by SAMA → SAMA CSF + SAMA IT Governance + SAMA BCM. ECC may apply where the entity is also under NCA scope (rare but possible). PDPL always applies if processing personal data.
-- Telecom / ICT licensee → CST regulations + ECC-2:2024 + PDPL.
+- Telecom / ICT licensee → CST CRF RT08 (cybersecurity controls for ICT SPs) + CST regulations + ECC-2:2024 + PDPL. If classified as CNI: also NCA ECC with NCA oversight.
 - Cloud Service Provider operating in KSA → CST CCRF (licensing class) + CCC-2:2024 (CSP side) + ECC-2:2024 + DCC-1:2022 + PDPL.
 - Cloud Service Tenant (any KSA org consuming cloud) → CCC-2:2024 (CST/tenant side) on top of its baseline framework.
 - Critical national infrastructure (energy, water, transport, health systems designated by NCA) → ECC-2:2024 + CSCC-1:2019 + OTCC-1:2022 (if OT) + DCC-1:2022 + PDPL.
@@ -76,6 +81,14 @@ Step 2 — Add overlays:
 - Telework / hybrid workforce → TCC-1:2023.
 - OT/ICS in scope → OTCC-1:2022.
 - Critical systems present → CSCC-1:2019 over those systems only.
+- Cloud services used or planned → CCC-2:2024 (Subdomain 4-2 of ECC-2:2024 also applies).
+- Official social media accounts used → OSMACC-1:2021.
+- Cryptography in use for any data protection → NCS-1:2020 (MODERATE minimum; ADVANCED for Secret/Top Secret data per DCC-1:2022 §2-5-1 or for ADVANCED-designated systems).
+
+> **Critical ECC-2 flags to raise during classification:**
+> - **Saudization (ECC-2:2024 §1-2-2):** All cybersecurity positions must be full-time qualified Saudi nationals. Flag immediately if the entity relies on non-Saudi staff or contractors in cybersecurity roles.
+> - **Managed SOC residency (ECC-2:2024 §4-1-3-2):** Any cybersecurity managed service centre using remote access must be physically located in KSA.
+> - **Data localisation:** Removed from ECC-2:2024 (old 4-2-3-3 deleted) but not abolished — obligation transferred to NDMO. Always check NDMO standards and sector-specific rules before advising on cloud architecture.
 
 Step 3 — Identify the **lead regulator**. SAMA-supervised entities answer to SAMA first; cloud licensees to CST; everyone with personal data also answers to SDAIA.
 
@@ -99,6 +112,30 @@ When the user provides architecture, policies, audit findings, an incident descr
 - **Non-compliant** — control absent or materially deficient.
 - **Not applicable** — justify why; auditors will challenge this.
 - **Insufficient evidence** — cannot determine; ask for the specific artefact you need.
+
+For ECC-2:2024 assessments, always check these as an opening triage (most-cited gaps):
+1. Saudization of all cybersecurity positions (§1-2-2)
+2. MFA on remote access AND privileged accounts (§2-2-3-2)
+3. SPF + DKIM + DMARC all deployed (§2-4-3-5)
+4. DDoS protection in place (§2-5-3-9) — new control, often missing
+5. Log retention at least 12 months with continuous monitoring (§2-12-3-4, 2-12-3-5)
+6. Managed SOC physically in KSA if remote access used (§4-1-3-2)
+7. Data localisation checked against NDMO even if 4-2-3-3 was deleted from ECC
+
+For DCC-1:2022 assessments, additionally check (DCC is additive to ECC, not standalone):
+8. Data classification scheme is defined, operated, and covers all four levels (Public / Confidential / Secret / Top Secret)
+9. Saudi-national access restriction for Secret/Top Secret data (§2-1-1-1) — separate from ECC staffing Saudization
+10. Immediate patch deployment for Secret/Top Secret systems (§2-2-1-1) — not monthly
+11. BYOD prohibited for Secret/Top Secret data (§2-3-1-2)
+12. DLP **and** Rights Management deployed from Confidential level upwards (§2-4-1-2) — DLP alone is insufficient
+13. Watermarking traceable to user/device for Secret/Top Secret (§2-4-1-1)
+14. Cryptographic standard level matches classification: NCS-1:2020 moderate (Confidential) / advanced (Secret, Top Secret) (§2-5-1)
+15. Secure disposal records and verification evidence maintained (§2-6-1-4, 2-6-1-5)
+16. Printer/scanner controls implemented at Secret/Top Secret (§2-7) — new subdomain, frequently absent
+17. Cross-border transfer approvals documented with Authorising Official sign-off (§3-1-1-4)
+18. Cryptographic standards checked against NCS-1:2020: data classification mapped to MODERATE or ADVANCED level; RSA key lengths ≥ 3072 bits (MODERATE) or ECC-only (ADVANCED); SHA-1/MD5 absent; TLS 1.0/1.1 disabled; CBC mode not used for ADVANCED
+19. Private key storage: hardware cryptographic module for ADVANCED (software modules not accepted for ADVANCED); key lifetimes within NCS limits (hardware MODERATE ≤ 5 years; ADVANCED ≤ 3 years; software MODERATE ≤ 2 years)
+20. WPA3-Enterprise applied to Wi-Fi once available (WPA2 not accepted per NCS §4.7)
 
 **Stage C — Risk and priority rating.** Apply both:
 
@@ -163,7 +200,7 @@ This helps multinationals reuse existing artefacts.
 Memorise these. Auditors will ask.
 
 - **PDPL personal-data breach**: notify SDAIA without delay; the Implementing Regulations specify 72 hours where the breach causes harm. Notify affected data subjects without undue delay where there is high risk.
-- **NCA significant cyber incident**: report to NCA per the relevant Sectoral Regulatory Authority and NCA's incident reporting procedures (sector-specific timelines apply; confirm with the user).
+- **NCA cybersecurity incident (ECC-2:2024 §2-13-3-3, 2-13-3-4):** Entity must have documented procedures for reporting to NCA and for sharing incident notifications, threat intelligence, and penetration indicators with NCA. Sector-specific timelines apply — confirm with user against their NCA licence/designation conditions.
 - **SAMA cyber incident**: notify SAMA's Cyber Threat Intelligence Unit (CTI) per the Cyber Incident Reporting Procedure — for major incidents, immediate verbal notification followed by written report within stipulated window.
 - **CST service disruption**: report per CST service-quality and incident regulations applicable to the licence class.
 - **NDMO data incidents**: report through the government data incident channel.
@@ -192,11 +229,16 @@ Read the relevant files in `references/` before answering domain-specific questi
 - `references/DCC-1-2022.md` — Data Cybersecurity Controls
 - `references/CSCC-1-2019.md` — Critical Systems Cybersecurity Controls
 - `references/OTCC-1-2022.md` — Operational Technology Cybersecurity Controls
-- `references/TCC-1-2023.md` — Telework Cybersecurity Controls
+- `references/TCC-1-2023.md` — Telework Cybersecurity Controls (TCC-1:2021): 3 domains, 16 subdomains, 21 main controls, 42 subcontrols; extends ECC-1:2018 across 16 subdomains; verified against TCC-1:2021 source PDF
 - `references/SAMA-CSF.md` — SAMA Cybersecurity Framework + IT Governance + BCM notes
-- `references/CST-Regulations.md` — CCRF, licence classes, data localisation
+- `references/CST-Regulations.md` — CCRF (RS10), cloud licence classes, data localisation
+- `references/CST-CRF.md` — CST Cybersecurity Regulatory Framework (RT08) for ICT Service Providers: telecom operators, ISPs, managed service providers; 6 domains, 25 subdomains, CL 1/2/3 compliance levels; verified against RT08 Second Version October 2023 source PDF
 - `references/PDPL.md` — PDPL, Implementing Regs, Transfer Regulation
 - `references/NDMO-Standards.md` — Data Management & Personal Data Protection Standards
+- `references/OSMACC-1-2021.md` — Organizations' Social Media Accounts Cybersecurity Controls
+- `references/CGEC-1-2019.md` — Cybersecurity Guidelines for E-commerce Consumers (consumer-facing awareness; implies operator obligations under ECC, PDPL, and E-commerce Law)
+- `references/CGESP-1-2019.md` — Cybersecurity Guidelines for E-commerce Service Providers (SME/SoHo-facing awareness; 7 categories, 30 guidelines; scope-tagged SoHo+SME or SME-only per guideline; complements ECC-2:2024, PDPL, SAMA CSF, and OSMACC-1:2021)
+- `references/NCS-1-2020.md` — National Cryptographic Standards (mandatory minimum cryptographic requirements; two levels: MODERATE=128-bit, ADVANCED=256-bit; covers primitives, schemes, protocols, PKI, KLM; referenced by ECC-2:2024 §2-5 and DCC-1:2022 §2-5-1; post-quantum update pending)
 - `references/finding-template.md` — Finding row template
 - `references/examples.md` — Worked example assessments
 
