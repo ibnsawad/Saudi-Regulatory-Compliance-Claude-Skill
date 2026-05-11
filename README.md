@@ -221,5 +221,4 @@ Suggestions and contributions welcome — see DISCLAIMER for use limits.
 ## Author
 
 **Majid Bin Sawad**
-Cybersecurity Director
-majid.sawad@gmail.com
+
