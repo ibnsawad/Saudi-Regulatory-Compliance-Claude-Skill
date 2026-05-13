@@ -225,11 +225,11 @@ Links to the authoritative publications this skill is based on:
 
 | Authority | Resource | Link |
 |-----------|----------|-------|
-| NCA | All published frameworks (ECC, CCC, DCC, OSMACC, NCS, etc.) | [nca.gov.sa](https://nca.gov.sa/en/pages/regulations.html) |
-| SAMA | Cybersecurity Framework and related regulations | [sama.gov.sa — Regulatory Sandbox & Rules](https://www.sama.gov.sa/en-US/Rules/Pages/Regulatory-Rules.aspx) |
-| CST | Cloud Computing Regulatory Framework, CRF RT08 | [cst.gov.sa — Regulations](https://www.cst.gov.sa/en/regulations/regulations) |
+| NCA | All published frameworks (ECC, CCC, DCC, OSMACC, NCS, etc.) | [nca.gov.sa](https://nca.gov.sa/en/) |
+| SAMA | Cybersecurity Framework and related regulations | [sama.gov.sa — Regulatory Sandbox & Rules](https://www.sama.gov.sa/en-US/) |
+| CST | Cloud Computing Regulatory Framework, CRF RT08 | [cst.gov.sa — Regulations](https://www.cst.gov.sa/en/) |
 | SDAIA / NDMO | PDPL, Implementing Regulations, Data Transfer Regulation | [sdaia.gov.sa](https://sdaia.gov.sa/en/) |
-| NDMO | Data Management and Personal Data Protection Standards | [ndmo.gov.sa](https://ndmo.gov.sa/en) |
+| NDMO | Data Management and Personal Data Protection Standards | [ndmo.gov.sa](https://sdaia.gov.sa/en/Sectors/NDMO/Pages/default.aspx) |
 
 > Always verify you are using the latest published version before a formal assessment. Regulations are updated periodically without advance notice.
 
